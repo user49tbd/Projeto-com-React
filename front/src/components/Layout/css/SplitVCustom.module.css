@@ -1,0 +1,10 @@
+.SplitVCon,.SplitVCon > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.SplitVCon{
+    width: 100%;
+    height: 100%;
+}

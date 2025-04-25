@@ -1,0 +1,124 @@
+
+:root {
+    --size-header: 2.25rem;
+    --size-accordion-title: 1.25rem;
+    --size-accordion-content: 1rem;
+    --animation-speed: 100;
+    --slide-ease: cubic-bezier(0.86, 0, 0.07, 1);
+    --slide-duration: calc(400ms * 100 / var(--animation-speed));
+    --slide-delay: calc(450ms * 100 / var(--animation-speed));
+    --circle-duration: calc(900ms * 100 / var(--animation-speed));
+}
+*::before,
+*::after {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1 {
+    margin: 0;
+}
+main>h1 {
+    font-size: var(--size-header);
+    margin-bottom: 1.25rem;
+    color: black;
+}
+
+::selection {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.accordion {
+    --circle-x: 1.8rem;
+    --circle-y: 0;
+    --circle-r: 200%;
+    --circle-bg: #fff;
+    color: #000;
+
+    background-color: var(--circle-bg);
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-rows: 0fr 0fr;
+    transition-timing-function: var(--slide-ease);
+    transition-duration: 200ms, 200ms, var(--slide-duration);
+    transition-property: opacity, box-shadow, grid-template-rows;
+    transition-delay: 0ms, 0ms, var(--slide-delay);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+.accordion,
+.content {
+    overflow: hidden;
+}
+
+input:focus+.accordion {
+    --d: 90deg;
+    grid-template-rows: 0fr 1fr;
+    background-color: black;
+    color: white;
+    transition: grid-template-rows var(--slide-ease) var(--slide-duration) var(--slide-delay);
+}
+
+input:focus+.accordion>.title>p {
+    color: white;
+}
+
+.wrapper {
+    padding-block: 0 1.05rem;
+    padding-inline: 1.25rem;
+}
+
+.content {
+    font-size: 15px;
+    line-height: 140%;
+}
+
+.title p {
+    padding: 1rem 1.25rem;
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title p::before {
+    /*"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath fill='white' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E"*/
+    /*url("../../views/imgs/bell.png");*/
+    --chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath fill='white' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0.65rem;
+    aspect-ratio: 320 / 512;
+    display: inline-block;
+    margin-right: 0.75rem;
+    transform: rotate(var(--d, 0deg));
+    transition: transform var(--slide-ease) var(--slide-duration) var(--slide-delay);
+    mask-image: var(--chevron-icon);
+    mask-size: 100% 100%;
+    -webkit-mask-image: var(--chevron-icon);
+    -webkit-mask-size: 100% 100%;
+    background-color: red;
+    object-fit: cover;
+    object-position: center;
+}
+.inputEl{
+    user-select: none;
+    position: absolute !important;
+    display: flex !important;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+
+}

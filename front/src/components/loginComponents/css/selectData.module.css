@@ -1,0 +1,41 @@
+.selectC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.selectC > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.selectC > *:nth-child(2){
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: auto;
+}
+.conditionItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    width: 30%;
+    transition: 0.5s;
+    user-select: none;
+    font-size: 12px;
+    text-align: center;
+}
+.conditionItem:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}

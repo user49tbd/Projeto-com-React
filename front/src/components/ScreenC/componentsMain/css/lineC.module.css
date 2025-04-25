@@ -1,0 +1,45 @@
+:root{
+    --w:0
+}
+.lowerSection02 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.lowerSection02::before {
+    content: '';
+    position: absolute;
+    width: var(--w);
+    height: 5px;
+    background-color: #fe6601;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+
+
+.lowerSection02>*:nth-child(even)>span {
+    align-items: flex-start;
+    top: 0px;
+}
+
+.lowerSection02>*:nth-child(odd)>span {
+    align-items: flex-end;
+    bottom: 0px;
+}
+
+.lowerSection02>*:nth-child(even)>span>img {
+    bottom: 0px;
+    transform: translateY(50%);
+}
+
+.lowerSection02>*:nth-child(odd)>span>img {
+    transform: translateY(-50%);
+    top: 0px;
+}

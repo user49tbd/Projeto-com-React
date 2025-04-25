@@ -1,0 +1,53 @@
+.Container,.Sect,.Item,.mainDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    width: 70%;
+    height: 70%;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.Sect{
+    background-color: black;
+}
+.Sect:nth-of-type(1){
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    padding: 5px;
+}
+.Sect:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.Sect:nth-of-type(2) > *{
+    width: 100% !important;
+}
+.Item{
+    width: 100%;
+    height: 100%;
+}
+.mainDiv{
+    width: 100%;
+    height: 100%;
+
+}
+.fieldVImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.imgUsrC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+}

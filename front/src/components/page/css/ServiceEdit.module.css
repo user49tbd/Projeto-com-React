@@ -1,0 +1,138 @@
+.Container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Container > div{
+    width: 100%;
+}
+.Container > div:nth-child(1){
+    height: 60vh;
+}
+.Container > .Con:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frmCon{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    background-color: black;
+}
+form{
+    width: 80% !important;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+form > h4{
+    margin-left: auto;
+    margin-right: 100%;
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.imgF{
+    position: absolute;
+    height: 80%;
+    aspect-ratio: 1/1;
+    left: 0px;
+    top: 50%;
+    transform: translateX(-20%) translateY(-50%);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fieldV{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.fieldV > span,.imgF > span{
+    background-color: red;
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+    padding: 2px;
+}
+.imgF:has(.imgUsrC ~ span) .imgUsrC{
+    width: 100% !important;
+    height: 80% !important;
+}
+.imgF:has(.imgUsrC ~ span) .imgUsrC > label{
+    width: 100% !important;
+    height: 100% !important;
+}
+.imgF:has(.imgUsrC ~ span) .imgUsrC ~span{
+    width: 100% !important;
+}
+.txtArea{
+    width: 100%;
+    height: 50px;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.usrImg{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("../../../../public/assets/imgs/default-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imgUsrC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.inputImg{
+    display: none;
+}
+.servC{
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    min-height: 100vh;
+    grid-gap: 20px;
+}
+/*-------------------------------------------------------------*/
+.createBtn{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 10px;
+    height: 20px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    z-index: 10;
+}

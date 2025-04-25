@@ -1,0 +1,19 @@
+.Container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    top: 0%;
+    width: 40%;
+    right: 0px;
+    z-index: 50;
+}
+.Container > *,.Container > * >*{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}

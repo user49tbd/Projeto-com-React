@@ -1,0 +1,27 @@
+.topicItem,.topicItem>img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topicItem {
+    height: 100%;
+    width: 100%;
+    gap: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.topicItem>p {
+    text-align: justify;
+}
+
+.topicItem>img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+}

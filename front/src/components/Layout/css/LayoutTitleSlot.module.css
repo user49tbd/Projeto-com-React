@@ -1,0 +1,32 @@
+.ContainerTS{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.ContainerTS > *:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.ContainerTS > h3{
+    padding-left: 10px;
+    height: 30%;
+    text-transform: uppercase;
+    font-size: 45px;
+    width: 100%;
+}
+.ItemLst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+    gap: 10px;
+}

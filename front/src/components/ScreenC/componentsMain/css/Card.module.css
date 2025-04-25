@@ -1,0 +1,37 @@
+.Card,.Card > *,.upperCard > img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Card{
+    border-radius: 25px;
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.upperCard{
+    width: 100%;
+    height: 40%;
+    background-color: black;
+    position: relative;
+}
+.upperCard > img{
+    height: 50%;
+    padding: 5px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+}
+.lowerCard{
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.lowerCard > p{
+    text-align: justify;
+    padding: 5px;
+}

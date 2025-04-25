@@ -1,0 +1,201 @@
+.Container,.sideDiv,.mainDiv,form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sideDiv{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+}
+.mainDiv{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+form {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    gap: 5px;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+}
+.FormC{
+    position: relative;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+.FormC > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.inputImg{
+    display: none;
+}
+.usrImg{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("../../../../public/assets/imgs/default-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0px 5px 9px 0px rgba(0, 0, 0,0.5);
+}
+.usrImg2{
+    aspect-ratio: 1/0.3 !important;
+    height: 90px !important;
+    border-radius: 5px !important;
+}
+/*--------------------------*/
+/*
+.selectC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    border: 2px solid red;
+}
+.selectC > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid yellow;
+}
+.selectC > *:nth-child(2){
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: auto;
+}
+.conditionItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 25%;
+    transition: 0.5s;
+    user-select: none;
+}
+.conditionItem:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}*/
+
+.form_control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    font-size: 30px;
+}
+
+.imgUsrC{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+}
+.imgUsrC2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*-------------------------*/
+
+.sideDiv > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sideDiv > div >img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.5s;
+}
+.sideDiv > div >img.select{
+    background-color: white !important;
+    opacity: 0.8;
+}
+.sideDiv > div > p{
+    display: none;
+}
+
+.opac{
+    opacity: 0;
+    z-index: -1 !important;
+    display: none !important;
+}
+
+.fieldV{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.fieldV > span{
+    background-color: red;
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+    padding: 2px;
+}
+.delBtn{
+    position: absolute !important;
+    top: 0px;
+    right: 0px;
+    height: 30px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 25;
+    transform: translateY(25%) translateX(-20%);
+    background-color: transparent;
+}
+.delBtn > img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,24 @@
+.ItemP,.ItemP > img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ItemP{
+    height: 100%;
+    width: 15%;
+    flex-direction: column;
+    gap: 20px;
+}
+.ItemP > img{
+    height: 25%;
+    padding: 5px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+    box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
+}
+.ItemP > p{
+    text-align: center;
+}
