@@ -43,7 +43,7 @@ export default function CardService(props) {
     }, [])*/
     useEffect(() => {
         const executarEfeito = async () => {
-            const qtd = getQtdF();
+            const qtd = await getQtdF();
             //const obj = props.onSub;
 
             if (qtd) {
