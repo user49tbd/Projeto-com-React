@@ -20,10 +20,6 @@ Projeto em Desenvolvimento
 :diamond_shape_with_a_dot_inside:React: Biblioteca JavaScript para criar a interface de usuário interativa e dinâmica.<br>
 :diamond_shape_with_a_dot_inside:CSS/HTML: Para estilizar e estruturar a aplicação front-end.<br>
 
-
-
-
-
-
+##Vídeo
 https://github.com/user-attachments/assets/8ff70166-59ad-4d62-b36d-51c0db86b80c
 
