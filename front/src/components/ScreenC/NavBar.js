@@ -30,6 +30,9 @@ export default function NavBar() {
                     }
                     <li><Link to="/info">Info</Link></li>
                     {
+                        localStorage.getItem("usrName")&& <li><Link to="/que">Queue</Link></li>
+                    }
+                    {
                         localStorage.getItem("usrName") ? <li onClick={logout}>logout</li> : <li onClick={LoadL}>Login</li>
                     }
                     {

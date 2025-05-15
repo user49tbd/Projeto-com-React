@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom"
 import MainPage from './components/page/main.js';
 import FooterC from './components/Layout/FooterC.js';
 import NavBar from './components/ScreenC/NavBar.js';
-import { show$,showS$ } from './Observables/obsShow'
+import { show$,showS$,showCheckP$ } from './Observables/obsShow'
 import { lstMsg$ } from './Observables/obsShow'
 import LoginP from './components/page/loginP.js';
 import SignP from './components/page/signP.js';
@@ -17,6 +17,8 @@ import ServicesC from './components/page/services.js';
 import ServiceEdit from './components/page/serviceEdit.js';
 import ServPassP from './components/page/ServPassP.js';
 import Info from './components/page/info.js';
+import CheckPriv from './components/page/checkPriv.js';
+import QueueC from './components/page/queueC.js';
 export function change2(title1, msg1, type1,lstV) {
   //let arr = [...popLst];
   let arr = [...lstV.getValue()];
@@ -35,6 +37,11 @@ function App() {
   const [showS, setShowS] = useState(false);
   useEffect(() => {
     const subscription = showS$.subscribe(setShowS);
+    return () => subscription.unsubscribe();
+  }, []);
+  const [showF, setShowF] = useState(false);
+  useEffect(() => {
+    const subscription = showCheckP$.subscribe(setShowF);
     return () => subscription.unsubscribe();
   }, []);
   /*-----------------------*/
@@ -83,7 +90,9 @@ function App() {
           <Route path='/services' element={<ServicesC></ServicesC>}></Route>
           <Route path='/servicedit' element={<ServiceEdit></ServiceEdit>}></Route>
           <Route path='/info' element={<Info></Info>}></Route>
+          <Route path='/que' element={<QueueC></QueueC>}></Route>
         </Routes>
+        <CheckPriv showP={showF}></CheckPriv>
       </Router>
       <LoginP showP={show}></LoginP>
       <SignP showP={showS}></SignP>

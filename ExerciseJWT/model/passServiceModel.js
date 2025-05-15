@@ -51,6 +51,23 @@ export const selectAllPassFromService = (id,status) => {
         );
     });
 }
+export const selectPassServiceID = (email, status) => {
+    return new Promise((resolve, reject) => {
+        db.get(
+            "SELECT SERV_ID FROM PASSSERVICE WHERE EMAIL = ? AND STATUS = ?",
+            [email, status],
+            function (err, row) {
+                if (err) {
+                    return reject({ msgE: "Erro ao buscar senhas: " + err });
+                }
+                if (!row) {
+                    return resolve({ msgE: "Nenhum resultado encontrado." });
+                }
+                resolve({ serv_id: row.SERV_ID });
+            }
+        );
+    });
+};
 export const checkSign = (status,email) => {
     return new Promise((resolve, reject) => {
         db.get(

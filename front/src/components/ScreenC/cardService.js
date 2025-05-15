@@ -1,9 +1,13 @@
 import React from "react";
 import Style from "./css/cardService.module.css"
 import { useRef, useEffect, useState } from "react";
-import { lstMsg$ } from "../../Observables/obsShow";
+import { lstMsg$,newObj$ } from "../../Observables/obsShow";
 import { change2 } from "../../App";
 import { useNavigate, useLocation } from "react-router-dom";
+
+
+import { showCheckP$ } from "../../Observables/obsShow";
+
 export default function CardService(props) {
     let bkRef = useRef()
     const [qtdA, setQtdA] = useState(0)
@@ -43,7 +47,7 @@ export default function CardService(props) {
     }, [])*/
     useEffect(() => {
         const executarEfeito = async () => {
-            const qtd = getQtdF();
+            const qtd = await getQtdF();
             //const obj = props.onSub;
 
             if (qtd) {
@@ -62,10 +66,11 @@ export default function CardService(props) {
 
 
             console.log("this is the pass data");
+            console.log(qtd)
             console.log(up)
             setCanSub(1);
 
-            if (qtd === props.qtd || props.qtd === 0) {
+            if (qtd == props.qtd || props.qtd == 0) {
                 setCanSub(2);
             } else {
                 if (up.serv_id) {
@@ -117,15 +122,26 @@ export default function CardService(props) {
             change2('Erro', data.msg, 1, lstMsg$)
         }
     };
+    async function LoadForm(props){
+            showCheckP$.next(true);
+            let qtd = await getQtdF();
+            let objT = {...props}
+            objT.qtd = qtd
+            newObj$.next(objT)
+    }
     async function submit() {
         let role = localStorage.getItem("type")
         if (role != "admin") {
+            console.log("loading")
+            await LoadForm(props)
+            /*
             await handleSubmit()
             const qtd = getQtdF();
             if (qtd) {
                 setQtdA(qtd);
             }
             window.location.reload();
+            */
         }else{
             change2('Erro','Médicos não podem se inscrever.', 1, lstMsg$)
         }

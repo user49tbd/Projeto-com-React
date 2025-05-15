@@ -9,4 +9,8 @@ export const showFgt$ = new BehaviorSubject(false);
 
 export const showPass$ = new BehaviorSubject(false);
 
+export const showCheckP$ = new BehaviorSubject(false);
+
 export const showPassObj$ = new BehaviorSubject({});
+
+export const newObj$ = new BehaviorSubject({});

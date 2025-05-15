@@ -1,0 +1,180 @@
+.Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+}
+.usrList{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 5px;
+}
+.CardUsr{
+    height: 100%;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    overflow: hidden;
+}
+.CardH{
+    background-color: black;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+.CardH > img{
+    height: 70%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    clip-path: circle(50%);
+}
+.CardH > p{
+    color: white;
+    text-overflow: ellipsis;
+}
+.CardB{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 50%;
+    padding: 10px;
+    overflow-y: auto;
+    gap: 2px;
+}
+.CardB > p{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 3px;
+    border-radius: 2px;
+}
+.servC{
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    min-height: 100vh;
+    grid-gap: 20px;
+}
+.CardServ{
+    height: 200px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.cardImbgBk{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+}
+.cardImbgBk > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+    filter: grayscale(0.5) blur(2px);
+}
+
+.Content{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    gap: 15px;
+    color: white;
+}
+.mainT,.docInfo{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.mainT > img,.docInfo > img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    filter: invert(1);
+}
+.mainT > p{
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.docInfo > p{
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.Content > p{
+    text-align: justify;
+}
+.Content > button{
+    width: 100%;
+    background-color: black;
+    height: 30px;
+    color: white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.Content > button:hover{
+    background-color: white;
+    color: black;
+}
+.ConCard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.BtnCon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.BtnCon > button{
+    width: 30%;
+    aspect-ratio: 1/0.2;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.BtnCon > button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
